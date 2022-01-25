@@ -12,7 +12,7 @@ public class AdultUsers implements LibraryUser {
 	// methods
 	@Override
 	public void registerAccount() {
-		// TODO Auto-generated method stub
+		
 		String message = "";
 		if (this.age > 12) {
 			message = "You have successfully registered under an Adult Account";
@@ -24,7 +24,7 @@ public class AdultUsers implements LibraryUser {
 
 	@Override
 	public void requestBook() {
-		// TODO Auto-generated method stub
+		
 		String message = "";
 		if (this.bookType.equals("Fiction")) {
 			message = "Book Issued successfully, please return the book within 7 days";
@@ -32,6 +32,11 @@ public class AdultUsers implements LibraryUser {
 			message = "Oops, you are allowed to take only adult Fiction books";
 		}
 		System.out.println(message);
+	}
+
+	@Override
+	public String toString() {
+		return "AdultUsers [age=" + age + ", bookType=" + bookType + "]";
 	}
 
 }// class

@@ -13,7 +13,7 @@ public class KidUsers implements LibraryUser {
 	// methods
 	@Override
 	public void registerAccount() {
-		// TODO Auto-generated method stub
+		
 		String message = "";
 		if (this.age < 12) {
 			message = "You have successfully registered under a Kids Account";
@@ -27,7 +27,7 @@ public class KidUsers implements LibraryUser {
 
 	@Override
 	public void requestBook() {
-		// TODO Auto-generated method stub
+		
 		String message = "";
 		if (bookType.equals("Kids")) {
 			message = "Book Issued successfully, please return the book within 10 days";
@@ -35,6 +35,11 @@ public class KidUsers implements LibraryUser {
 			message = "Oops, you are allowed to take only kids books";
 		}
 		System.out.println(message);
+	}
+
+	@Override
+	public String toString() {
+		return "KidUsers [age=" + age + ", bookType=" + bookType + "]";
 	}
 
 }// class
